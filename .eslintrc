@@ -1,0 +1,18 @@
+---
+extends: airbnb
+parser: babel-eslint
+
+env:
+  es6: true
+  node: true
+  mocha: true
+
+rules:
+  arrow-body-style: [1]
+  react/jsx-no-bind: [1]
+  react/prefer-stateless-function: [1]
+  react/prop-types: [0]
+  prefer-stateless-function: [0]
+  no-warning-comments: [1]
+  jsx-closing-bracket-location: [1, {selfClosing: 'after-props', nonEmpty: 'props-aligned'}]
+  react/jsx-filename-extension: [0]
