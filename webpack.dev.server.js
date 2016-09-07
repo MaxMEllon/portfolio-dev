@@ -6,7 +6,7 @@ var config = require('./webpack.config.babel.js');
 var compiler = webpack(config);
 
 var server = new WebpackDevServer(compiler, {
-  publicPath: config[0].output.publicPath,
+  publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true,
 });

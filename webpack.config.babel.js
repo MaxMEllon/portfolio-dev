@@ -6,18 +6,24 @@ const { name } = require('./package.json');
 const pascalCase = require('pascal-case');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const configs = [{
+const DEBUG = process.env.NODE_ENV !== 'production';
+
+console.log(`DEBUG: ${DEBUG}`);
+
+const configs = {
   entry: {
-    app: [
+    app: DEBUG === true ? [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/dev-server',
+      './src/index',
+    ] : [
       './src/index',
     ],
   },
   output: {
     path: `${__dirname}/bundle/`,
     filename: `${name}.js`,
-    publichPath: './public/',
+    publichPath: './bundle/',
     library: pascalCase(name),
     libraryTarget: 'umd',
   },
@@ -30,7 +36,7 @@ const configs = [{
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel'],
+        loaders: DEBUG === true ? ['react-hot', 'babel'] : ['babel'],
       },
       {
         test: /\.css$/,
@@ -46,37 +52,36 @@ const configs = [{
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
       },
     ],
   },
   resolve: {
     extensions: ['', '.js', '.json'],
   },
-  devtool: 'eval',
-  devServer: {
+  devServer: DEBUG  === true ? {
     contentBase: 'release',
     noInfo: true,
     quiet: true,
-  },
-}];
+  } : {},
+};
 
 switch (process.env.NODE_ENV) {
   case 'production':
-    configs[0].plugins = [
+    configs.plugins = [
       new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
     ];
-
-    configs[0].devtool = '#source-map';
+    configs.devtool = '';
     break;
 
   default:
-    configs[0].plugins = [
-      new webpack.HotModuleReplacementPlugin()
+    configs.plugins = [
+      new webpack.HotModuleReplacementPlugin(),
     ];
-    configs[0].devtool = 'inline-source-map';
+    configs.devtool = 'inline-source-map';
+    break;
 }
 
-configs[0].plugins.push(new ExtractTextPlugin('bundle.css'));
+configs.plugins.push(new ExtractTextPlugin('bundle.css'));
 
 module.exports = configs;
