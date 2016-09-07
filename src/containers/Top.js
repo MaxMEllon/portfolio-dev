@@ -3,7 +3,8 @@ import TopMenu from '../components/TopMenu';
 import About from '../components/About';
 import Environment from '../components/Environment';
 import Articles from '../Components/Articles';
-import Activities from '../components/Activities'
+import Activities from '../components/Activities';
+import Projects from '../components/Projects';
 
 export default class Top extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export default class Top extends Component {
         <Environment />
         <Articles />
         <Activities />
+        <Projects />
       </div>
     );
   }

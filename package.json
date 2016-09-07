@@ -10,6 +10,8 @@
     "test": "karma start --single-run",
     "cover": "abby test, report",
     "lint": "eslint src test",
+    "prerelease": "npm run build",
+    "release": "cp -r bundle deploy && cd deploy && git add . && git commit -m 'Auto commit' && git push",
     "build": "abby webpack --env",
     "dev": "abby dev:* --parse parallel",
     "dev:build": "webpack",

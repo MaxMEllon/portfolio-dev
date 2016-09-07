@@ -48,6 +48,18 @@ export default class TopMenu extends Component {
     this.sweetScroll.to('top-menu');
   }
 
+  onClickArticles() {
+    this.sweetScroll.to('.articles');
+  }
+
+  onClickActivities() {
+    this.sweetScroll.to('.activities');
+  }
+
+  onClickProjects() {
+    this.sweetScroll.to('.projects');
+  }
+
   render() {
     return (
       <div className="top-menu">
@@ -65,14 +77,17 @@ export default class TopMenu extends Component {
           <MenuButton
             icon="file-text-o"
             text="Articles"
+            onClick={this.onClickArticles}
           />
           <MenuButton
             icon="child"
             text="Activities"
+            onClick={this.onClickActivities}
           />
           <MenuButton
             icon="code"
             text="Projects"
+            onClick={this.onClickProjects}
           />
           <MenuButton
             icon="globe"
