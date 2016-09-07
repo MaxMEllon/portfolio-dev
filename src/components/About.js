@@ -16,8 +16,9 @@ export default class About extends Component {
     return (
       <div className="about">
         <h1 className="title">
-          <i className="fa fa-user"></i>About me
+          <i className="fa fa-user" />About me
         </h1>
+        <hr className="border-line" />
         <table>
           <tbody>
             <tr>

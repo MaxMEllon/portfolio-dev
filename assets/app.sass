@@ -4,6 +4,8 @@ $black: #2F2F2F
 
 @import about
 @import environment
+@import articles
+@import activities
 
 @keyframes hover-button
   0%
@@ -63,6 +65,7 @@ body
   right: 21.5%
   font-size: 30px
   text-shadow: 0px 0px 20px white
+  margin-top: 50px
 
 .menu-box
   position: relative
@@ -116,7 +119,7 @@ a.link
   border: solid 1px gray
   border-radius: 3px
   padding: 2px 5px
-  margin-left: 5px
+  margin: 0 10px
   background: rgba(255, 255, 255, 0.7)
   color: gray
 
@@ -126,8 +129,8 @@ a.link
     border-color: blue !important
 
 table
-  width: 100%
-  max-width: 100%
+  width: 87%
+  max-width: 87%
   margin-bottom: 20px
   color: $black
   font-size: 20px
@@ -162,13 +165,29 @@ table
   padding-right: 2%
   font-size: 1.5em
   text-align: right
-  color: #808686
+  color: #202021
   cursor: pointer
   z-index: 530000
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7)
 
+  &:hover
+    color: #505051
+    right: -3px
+    bottom: 2px
+
   p.page-up
+    background-color: #f79995
+    border: solid 3px #a50902
+    height: 60px
+    width: 60px
+    border-radius: 60px
+    text-align: center
+    vertical-align: middle
     &:hover
       text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7)
     i
-      padding-right: 4px
+      padding-top: 15px
+
+hr.border-line
+  margin-bottom: 2em
+  border: solid 1px gray

@@ -58,10 +58,6 @@ export default class TopMenu extends Component {
             onClick={this.onClickAbout}
           />
           <MenuButton
-            icon="star"
-            text="Favorite things"
-          />
-          <MenuButton
             icon="desktop"
             text="Environment"
             onClick={this.onClickEnvironment}
@@ -86,22 +82,19 @@ export default class TopMenu extends Component {
         <div className="me" />
         <span className="name-badge">maxmellon</span>
         {(() => {
-          if (this.state.footerVisible) {
-            return (
-              <div
-                className="footer animated bounceIn"
-                onClick={this.onClickPageUp}>
-                <p className="page-up">
-                  <i
-                    className="fa fa-chevron-up"
-                    aria-hidden="true"
-                  />
-                  Page Up
-                </p>
-              </div>
-            );
-          }
-          return null;
+          const klass = this.state.footerVisible === true ? 'bounceIn' : 'bounceOut';
+          return (
+            <div
+              className={`up-button footer animated ${klass}`}
+              onClick={this.onClickPageUp}>
+              <p className="page-up">
+                <i
+                  className="fa fa-chevron-up"
+                  aria-hidden="true"
+                />
+              </p>
+            </div>
+          );
         })()}
       </div>
     );

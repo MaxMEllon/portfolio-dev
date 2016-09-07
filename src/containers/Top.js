@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import TopMenu from '../components/TopMenu';
 import About from '../components/About';
 import Environment from '../components/Environment';
+import Articles from '../Components/Articles';
+import Activities from '../components/Activities'
 
 export default class Top extends Component {
   constructor(props) {
@@ -16,6 +18,8 @@ export default class Top extends Component {
         <TopMenu />
         <About />
         <Environment />
+        <Articles />
+        <Activities />
       </div>
     );
   }
