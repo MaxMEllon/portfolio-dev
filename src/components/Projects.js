@@ -59,7 +59,7 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/babel-plugin-transform-isNil" >
+              href="https://github.com/MaxMEllon/react-addons-deep-compare" >
               <i className="fa fa-github" />
             </a>
             react-addons-deep-compare
@@ -146,7 +146,7 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/vim-jsx-pretty" >
+              href="https://github.com/MaxMEllon/simplayer" >
               <i className="fa fa-github" />
             </a>
             simplayer
@@ -170,7 +170,7 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/vim-jsx-pretty" >
+              href="https://github.com/MaxMEllon/nyaovim-nicolive-comment-viewer" >
               <i className="fa fa-github" />
             </a>
             nyaovim-nicolive-comment-viewer
@@ -193,7 +193,7 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/vim-jsx-pretty" >
+              href="https://github.com/MaxMEllon/comelon" >
               <i className="fa fa-github" />
             </a>
             comelon
