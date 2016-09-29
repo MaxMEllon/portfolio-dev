@@ -1,0 +1,82 @@
+{
+  "activities": [
+    {
+      "link": "",
+      "year": "2012",
+      "title":  "全日本合唱コンクール香川県大会",
+      "detail": "テノールセカンド 金賞"
+    },
+    {
+      "link": "",
+      "year": "2012",
+      "title":  "全日本合唱コンクール四国大会",
+      "detail": "テノールセカンド 金賞 (ダメ金)"
+    },
+    {
+      "link": "",
+      "year": "2013",
+      "title":  "ETロボコン2013 中四国地区",
+      "detail": "モデル部門4位 競技部門9位 総合6位"
+    },
+    {
+      "link": "http://icpc.iisf.or.jp/domestic/2013d/",
+      "year": "2013",
+      "title":  "ACM-ICPC2013",
+      "detail": ""
+    },
+    {
+      "link": "",
+      "year": "2013",
+      "title":  "株式会社アフレル冬期インターン",
+      "detail": "実務:30日間\r\nLEGO/EV3を用いたJava言語教育支援 教科書を作成"
+    },
+    {
+      "link": "",
+      "year": "2014",
+      "title":  "自主休学",
+      "detail": ""
+    },
+    {
+      "link": "http://icpc.iisf.or.jp/2015-tsukuba/?lang=ja",
+      "year": "2015",
+      "title":  "ACM-ICPC2015",
+      "detail": ""
+    },
+    {
+      "link": "http://recruit-jinji.jp/summer-internship2015/",
+      "year": "2015",
+      "title":  "株式会社リクルートホールディングス\r\nサマーインターン2015",
+      "detail": "実務:20日間\r\n顔認証可能な画像蓄積WebAPI構築"
+    },
+    {
+      "link": "https://github.com/MaxMEllon/LivenPepper",
+      "year": "2015",
+      "title":  "Mashup Awards 大阪予選 #MA11",
+      "detail": "企業賞(DataSpider賞)受賞 本戦:棄権"
+    },
+    {
+      "link": "",
+      "year": "2015",
+      "title":  "9947-CTF-2015",
+      "detail": ""
+    },
+    {
+      "link": "http://ce.eplang.jp/index.php?132%B2%F3%B8%A6%B5%E6%C8%AF%C9%BD%B2%F1",
+      "year": "2015",
+      "title":  "第132回CE・第17回CLE合同研究発表会",
+      "detail": "CE学生セッション"
+    },
+    {
+      "link": "",
+      "year": "2016",
+      "title":  "ピクシブ株式会社 選考インターン",
+      "detail": "実務:5日間"
+    },
+    {
+      "link": "",
+      "year": "2016",
+      "title":  "ISUCON6",
+      "detail": ""
+    }
+  ]
+}
