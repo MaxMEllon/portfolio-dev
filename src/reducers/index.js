@@ -1,9 +1,11 @@
+import _ from 'lodash';
 import { combineReducers } from 'redux';
 import * as actions from '../actions';
 
 const initalState = {
   selectedPage: '',
   enableScroll: false,
+  activities: {},
 };
 
 function indexReducer(state = initalState, { type, payload }) {
@@ -20,7 +22,17 @@ function scrollReducer(state = initalState.enableScroll, { type, payload }) {
     case actions.SCROLL_ACTION:
       return { enableScroll: payload };
     default:
-      return { enableScroll: state };
+      return state;
+  }
+}
+
+function activitiyReducer(state = initalState.activities, { type, payload }) {
+  switch (type) {
+    case actions.FETCH_ACTIVITIES:
+      console.info(payload);
+      return { activities: _.get(payload, 'data.activities', null) };
+    default:
+      return state;
   }
 }
 
@@ -28,5 +40,6 @@ export default combineReducers(
   {
     indexReducer,
     scrollReducer,
+    activitiyReducer,
   }
 );

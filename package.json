@@ -15,7 +15,7 @@
     "build": "abby webpack --env",
     "dev": "abby dev:* --parse parallel",
     "dev:env": "cross-env NODE_ENV=development",
-    "dev:server": "node ./webpack.dev.server.js" ,
+    "dev:server": "node ./webpack.dev.server.js",
     "dev:open": "wait-on http://localhost:8080 && opener http://localhost:8080/"
   },
   "abigail": {
@@ -28,6 +28,7 @@
   "devDependencies": {
     "abigail": "^1.9.1",
     "animate.css": "^3.5.1",
+    "axios": "^0.14.0",
     "babel-cli": "^6.11.4",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",

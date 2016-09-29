@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import _ from 'lodash';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SweetScroll from 'sweet-scroll';
 import TopMenu from '../components/TopMenu';
@@ -10,15 +11,17 @@ import Projects from '../components/Projects';
 import * as actions from '../actions/index';
 
 class Top extends Component {
+
   componentDidMount() {
+    this.props.dispatch(actions.fetchActivities());
     this.sweetScroll = new SweetScroll({
       duration: 1000,
       easing: 'easeOutBounce',
     });
   }
 
-  componentWillUpdate(nextState) {
-    this.sweetScroll.to(nextState.selectedPage);
+  componentWillUpdate(nextProps) {
+    this.sweetScroll.to(nextProps.selectedPage);
   }
 
   handleClick(payload) {
@@ -36,16 +39,19 @@ class Top extends Component {
         <About />
         <Environment />
         <Articles />
-        <Activities />
+        <Activities activities={_.get(this.props, 'activities', null)} />
         <Projects />
       </div>
     );
   }
 }
 
-
 export default connect(
-  state => ({
-    selectedPage: state.indexReducer.selectedPage,
-  })
+  state => {
+    console.info(state.activitiyReducer);
+    return {
+      selectedPage: state.indexReducer.selectedPage,
+      activities: state.activitiyReducer.activities,
+    };
+  }
 )(Top);
