@@ -16,7 +16,7 @@ export default class TopMenu extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll , false);
+    window.addEventListener('scroll', this.onScroll, false);
     this.sweetScroll = new SweetScroll({
       duration: 1000,
       easing: 'easeOutBounce',
@@ -27,37 +27,13 @@ export default class TopMenu extends Component {
     return deepCompare(this, nextProps, nextState);
   }
 
-  componentWillUnMount() {
-    window.removeEventListener('scroll', this.onScroll);
-  }
-
   onScroll() {
     const footerVisible = not(window.scrollY === 0);
     this.setState({ footerVisible });
   }
 
-  onClickAbout() {
-    this.sweetScroll.to('.about');
-  }
-
-  onClickEnvironment() {
-    this.sweetScroll.to('.environment');
-  }
-
-  onClickPageUp() {
-    this.sweetScroll.to('top-menu');
-  }
-
-  onClickArticles() {
-    this.sweetScroll.to('.articles');
-  }
-
-  onClickActivities() {
-    this.sweetScroll.to('.activities');
-  }
-
-  onClickProjects() {
-    this.sweetScroll.to('.projects');
+  componentWillUnMount() {
+    window.removeEventListener('scroll', this.onScroll);
   }
 
   render() {
@@ -67,27 +43,27 @@ export default class TopMenu extends Component {
           <MenuButton
             icon="user"
             text="About"
-            onClick={this.onClickAbout}
+            onClick={() => this.props.onClick('.about')}
           />
           <MenuButton
             icon="desktop"
             text="Environment"
-            onClick={this.onClickEnvironment}
+            onClick={() => this.props.onClick('.environment')}
           />
           <MenuButton
             icon="file-text-o"
             text="Articles"
-            onClick={this.onClickArticles}
+            onClick={() => this.props.onClick('.articles')}
           />
           <MenuButton
             icon="child"
             text="Activities"
-            onClick={this.onClickActivities}
+            onClick={() => this.props.onClick('.activities')}
           />
           <MenuButton
             icon="code"
             text="Projects"
-            onClick={this.onClickProjects}
+            onClick={() => this.props.onClick('.projects')}
           />
           <MenuButton
             icon="globe"
@@ -101,7 +77,8 @@ export default class TopMenu extends Component {
           return (
             <div
               className={`up-button footer animated ${klass}`}
-              onClick={this.onClickPageUp}>
+              onClick={this.onClickPageUp}
+            >
               <p className="page-up">
                 <i
                   className="fa fa-chevron-up"

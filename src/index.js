@@ -1,18 +1,20 @@
+import 'babel-polyfill';
 import '../assets/style';
 import 'react-fa';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import Top from './containers/Top';
+import createStore from './stores';
 
-window.onload = function() {
-  ReactDOM.render(<Top />, document.getElementById('main'));
+const store = createStore();
 
-  if (module.hot) {
-    module.hot.accept(function(err) {
-      if (err) console.error(err);
-    });
-  }
-}
-
-// vim: ft=javascript.jsx
+window.onload = function () {
+  ReactDOM.render(
+    <Provider store={store} >
+      <Top />
+    </Provider>,
+    document.getElementById('main')
+  );
+};
 

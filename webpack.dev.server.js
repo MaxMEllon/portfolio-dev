@@ -1,14 +1,16 @@
-'use strict';
+const WebpackDevServer = require('webpack-dev-server');
+const webpack = require('webpack');
+const config = require('./webpack.config.babel.js');
+const compiler = webpack(config);
 
-var WebpackDevServer = require('webpack-dev-server');
-var webpack = require('webpack');
-var config = require('./webpack.config.babel.js');
-var compiler = webpack(config);
-
-var server = new WebpackDevServer(compiler, {
+const server = new WebpackDevServer(compiler, {
   publicPath: config.output.publicPath,
-  hot: true,
+  hot: false,
+  inline: true,
+  progress: false,
   historyApiFallback: true,
+  stats: { colors: true },
+  contentBase: './',
 });
 
 server.listen(8080);

@@ -1,10 +1,9 @@
-'use strict';
-
 const webpack = require('webpack');
 const path = require('path');
 const { name } = require('./package.json');
 const pascalCase = require('pascal-case');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 const DEBUG = process.env.NODE_ENV !== 'production';
 
@@ -14,7 +13,6 @@ const configs = {
   entry: {
     app: DEBUG === true ? [
       'webpack-dev-server/client?http://localhost:8080',
-      'webpack/hot/dev-server',
       './src/index',
     ] : [
       './src/index',
@@ -23,7 +21,7 @@ const configs = {
   output: {
     path: `${__dirname}/bundle/`,
     filename: `${name}.js`,
-    publichPath: './bundle/',
+    publichPath: './bundle',
     library: pascalCase(name),
     libraryTarget: 'umd',
   },
@@ -36,7 +34,7 @@ const configs = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: DEBUG === true ? ['react-hot', 'babel'] : ['babel'],
+        loaders: DEBUG === true ? ['babel'] : ['babel'],
       },
       {
         test: /\.css$/,
@@ -44,7 +42,7 @@ const configs = {
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+        loader: 'url-loader',
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -59,11 +57,6 @@ const configs = {
   resolve: {
     extensions: ['', '.js', '.json'],
   },
-  devServer: DEBUG  === true ? {
-    contentBase: 'release',
-    noInfo: true,
-    quiet: true,
-  } : {},
 };
 
 switch (process.env.NODE_ENV) {
@@ -76,7 +69,10 @@ switch (process.env.NODE_ENV) {
 
   default:
     configs.plugins = [
-      new webpack.HotModuleReplacementPlugin(),
+      new LiveReloadPlugin({
+        appendScriptTag: true,
+        ignore: null,
+      }),
     ];
     configs.devtool = 'inline-source-map';
     break;
