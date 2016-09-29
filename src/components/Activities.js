@@ -16,7 +16,7 @@ export default class Activities extends Component {
         <table className="activity-list">
           <tbody>
             <tr>
-              <th colspan="3">
+              <th colSpan="3">
                 2012
               </th>
             </tr>
@@ -39,7 +39,7 @@ export default class Activities extends Component {
               </td>
             </tr>
             <tr>
-              <th colspan="3">
+              <th colSpan="3">
                 2013
               </th>
             </tr>
@@ -57,14 +57,15 @@ export default class Activities extends Component {
                 <a
                   className="link"
                   target="_blank"
-                  href="http://icpc.iisf.or.jp/domestic/2013d/" >
+                  href="http://icpc.iisf.or.jp/domestic/2013d/"
+                >
                   <i className="fa fa-external-link" />
                 </a>
               </td>
               <td>
                 ACM-ICPC2013
               </td>
-              <td className="detail"/>
+              <td className="detail" />
             </tr>
             <tr>
               <td className="link" />
@@ -81,7 +82,7 @@ export default class Activities extends Component {
               </td>
             </tr>
             <tr>
-              <th colspan="3">
+              <th colSpan="3">
                 2014
               </th>
             </tr>
@@ -91,7 +92,7 @@ export default class Activities extends Component {
               <td className="detail" />
             </tr>
             <tr>
-              <th colspan="3">
+              <th colSpan="3">
                 2015
               </th>
             </tr>
@@ -100,21 +101,23 @@ export default class Activities extends Component {
                 <a
                   className="link"
                   target="_blank"
-                  href="http://icpc.iisf.or.jp/2015-tsukuba/?lang=ja" >
+                  href="http://icpc.iisf.or.jp/2015-tsukuba/?lang=ja"
+                >
                   <i className="fa fa-external-link" />
                 </a>
               </td>
               <td>
                 ACM-ICPC2015
               </td>
-              <td className="detail"/>
+              <td className="detail" />
             </tr>
             <tr>
               <td className="link" >
                 <a
                   className="link"
                   target="_blank"
-                  href="http://recruit-jinji.jp/summer-internship2015/" >
+                  href="http://recruit-jinji.jp/summer-internship2015/"
+                >
                   <i className="fa fa-external-link" />
                 </a>
               </td>
@@ -136,7 +139,8 @@ export default class Activities extends Component {
                 <a
                   className="link"
                   target="_blank"
-                  href="https://github.com/MaxMEllon/LivenPepper" >
+                  href="https://github.com/MaxMEllon/LivenPepper"
+                >
                   <i className="fa fa-external-link" />
                 </a>
               </td>
@@ -159,7 +163,8 @@ export default class Activities extends Component {
                 <a
                   className="link"
                   target="_blank"
-                  href="http://ce.eplang.jp/index.php?132%B2%F3%B8%A6%B5%E6%C8%AF%C9%BD%B2%F1" >
+                  href="http://ce.eplang.jp/index.php?132%B2%F3%B8%A6%B5%E6%C8%AF%C9%BD%B2%F1"
+                >
                   <i className="fa fa-external-link" />
                 </a>
               </td>
@@ -171,7 +176,7 @@ export default class Activities extends Component {
               </td>
             </tr>
             <tr>
-              <th colspan="3">
+              <th colSpan="3">
                 2016
               </th>
             </tr>
@@ -184,19 +189,29 @@ export default class Activities extends Component {
                 実務:5日間
               </td>
             </tr>
+            <tr>
+              <td className="link" />
+              <td>
+                ISUCON6
+              </td>
+              <td className="detail">
+              </td>
+            </tr>
           </tbody>
         </table>
         <h2>最多コミットストリーク</h2>
         <div className="cover">
           <img
             src="./img/github-streak.png"
-            alt="github" />
+            alt="github"
+          />
         </div>
         <h2>wakatime ウィークリー 開発時間ランキング1位</h2>
         <div className="cover">
           <img
             src="./img/waka-ranking.png"
-            alt="github" />
+            alt="github"
+          />
         </div>
       </div>
     );
