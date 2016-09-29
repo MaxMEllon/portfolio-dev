@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SweetScroll from 'sweet-scroll';
 import autoBind from 'react-autobind';
 import deepCompare from 'react-addons-deep-compare';
 import MenuButton from './helper/MenuButton';
+import * as actions from '../actions';
 
-const not = obj => !obj;
-
-export default class TopMenu extends Component {
+class TopMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,24 +16,11 @@ export default class TopMenu extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll, false);
-    this.sweetScroll = new SweetScroll({
-      duration: 1000,
-      easing: 'easeOutBounce',
-    });
+    this.props.dispatch(actions.scrollAction(false));
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return deepCompare(this, nextProps, nextState);
-  }
-
-  onScroll() {
-    const footerVisible = not(window.scrollY === 0);
-    this.setState({ footerVisible });
-  }
-
-  componentWillUnMount() {
-    window.removeEventListener('scroll', this.onScroll);
   }
 
   render() {
@@ -73,11 +60,11 @@ export default class TopMenu extends Component {
         <div className="me" />
         <span className="name-badge">maxmellon</span>
         {(() => {
-          const klass = this.state.footerVisible === true ? 'bounceIn' : 'bounceOut';
+          const klass = this.props.isTop === true ? 'bounceIn' : 'bounceOut';
           return (
             <div
               className={`up-button footer animated ${klass}`}
-              onClick={this.onClickPageUp}
+              onClick={() => this.props.onClick('.top-menu')}
             >
               <p className="page-up">
                 <i
@@ -92,3 +79,10 @@ export default class TopMenu extends Component {
     );
   }
 }
+
+
+export default connect(
+  state => ({
+    isTop: state.scrollReducer.enableScroll,
+  })
+)(TopMenu);

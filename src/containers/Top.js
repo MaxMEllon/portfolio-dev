@@ -26,11 +26,11 @@ class Top extends Component {
   }
 
   render() {
-    console.info(this.props);
     return (
       <div className="top-container">
         <div className="top" />
         <TopMenu
+          dispatch={this.props.dispatch}
           onClick={(payload) => this.handleClick(payload)}
         />
         <About />

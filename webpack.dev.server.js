@@ -7,7 +7,7 @@ const server = new WebpackDevServer(compiler, {
   publicPath: config.output.publicPath,
   hot: false,
   inline: true,
-  progress: false,
+  progress: true,
   historyApiFallback: true,
   stats: { colors: true },
   contentBase: './',

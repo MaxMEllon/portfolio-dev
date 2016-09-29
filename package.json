@@ -16,7 +16,7 @@
     "dev": "abby dev:* --parse parallel",
     "dev:env": "cross-env NODE_ENV=development",
     "dev:server": "node ./webpack.dev.server.js" ,
-    "dev:open": "wait-on http://localhost:8080 && opener http://localhost:8080/webpack-dev-server"
+    "dev:open": "wait-on http://localhost:8080 && opener http://localhost:8080/"
   },
   "abigail": {
     "plugins": {
