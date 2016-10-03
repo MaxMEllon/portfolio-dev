@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React from 'react';
 
-const renderActivity = (activitiesByYears, selectedYear) => {
-  return activitiesByYears[selectedYear].map(activity => (
+const renderActivity = (activitiesByYears, selectedYear) => (
+  activitiesByYears[selectedYear].map(activity => (
     <tr key={activity.title}>
       <td className="link">
         {(() => {
@@ -11,6 +11,7 @@ const renderActivity = (activitiesByYears, selectedYear) => {
             <a
               className="link"
               target="_blank"
+              rel="noopener noreferrer"
               href={activity.link}
             >
               <i className="fa fa-external-link" />
@@ -21,11 +22,11 @@ const renderActivity = (activitiesByYears, selectedYear) => {
       <td>{activity.title}</td>
       <td className="detail">{activity.detail}</td>
     </tr>
-  ));
-};
+  )
+));
 
-const renderYears = (activitiesByYears, years) => {
-  return years.map(year => (
+const renderYears = (activitiesByYears, years) => (
+  years.map(year => (
     <div key={year}>
       <tr>
         <td className="year" colSpan="3">
@@ -34,13 +35,12 @@ const renderYears = (activitiesByYears, years) => {
       </tr>
       {renderActivity(activitiesByYears, year)}
     </div>
-  ));
-};
+  )
+));
 
 const Activities = ({ activities }) => {
   if (_.isEmpty(activities)) return null;
   const activitiesByYears = _.groupBy(activities, e => e.year);
-  console.info(activitiesByYears);
   const years = _.keys(activitiesByYears);
   return (
     <div className="activities">

@@ -1,22 +1,18 @@
+/* eslint import/no-extraneous-dependencies: [0] */
 const webpack = require('webpack');
-const path = require('path');
-const { name } = require('./package.json');
 const pascalCase = require('pascal-case');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+const { name } = require('./package.json');
 
 const DEBUG = process.env.NODE_ENV !== 'production';
-
-console.log(`DEBUG: ${DEBUG}`);
 
 const configs = {
   entry: {
     app: DEBUG === true ? [
       'webpack-dev-server/client?http://localhost:8080',
       './src/index',
-    ] : [
-      './src/index',
-    ],
+    ] : ['./src/index'],
   },
   output: {
     path: `${__dirname}/bundle/`,

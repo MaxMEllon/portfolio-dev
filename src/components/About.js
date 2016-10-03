@@ -40,9 +40,9 @@ export default class About extends Component {
               </td>
             </tr>
             <tr>
-              <td className="label"></td>
+              <td className="label" />
               <td className="content">城とドラゴン</td>
-              <td className="detail">うまP : 1454 (2016/08/23)</td>
+              <td className="detail">{'うまP : 1454 (2016/08/23)'}</td>
             </tr>
           </tbody>
         </table>

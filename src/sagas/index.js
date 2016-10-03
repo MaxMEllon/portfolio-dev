@@ -3,9 +3,10 @@ import { fork, take, put, call } from 'redux-saga/effects';
 import { eventChannel } from 'redux-saga';
 import * as actions from '../actions';
 
+const x = undefined;
 
 export function* handleActions() {
-  while (true) {
+  while (typeof x === 'undefined') {
     const action = yield take(actions.SELECT_PAGE);
     yield put(actions.selectPage({ selectedPage: action.payload }));
   }
@@ -13,7 +14,7 @@ export function* handleActions() {
 
 let prevState = false;
 
-export function scrollChannel(offset) {
+export function scrollChannel() {
   return eventChannel(emit => {
     const change = () => {
       if (window.scrollY === 0) {
@@ -26,7 +27,7 @@ export function scrollChannel(offset) {
     };
     window.addEventListener('scroll', change, false);
     return () => {
-      document.removeEventListener('scroll', change);
+      window.removeEventListener('scroll', change);
     };
   });
 }
@@ -38,7 +39,7 @@ function fetchActivities() {
 }
 
 export function* handleFetchActivities() {
-  while (true) {
+  while (typeof x === 'undefined') {
     yield take(actions.FETCH_ACTIVITIES);
     const activities = yield call(fetchActivities);
     yield put(actions.fetchActivities(activities));
@@ -47,7 +48,7 @@ export function* handleFetchActivities() {
 
 export function* handleScrollActions() {
   const channel = yield call(scrollChannel);
-  while (true) {
+  while (typeof x === 'undefined') {
     const action = yield take(channel);
     yield put(actions.scrollAction(action));
   }

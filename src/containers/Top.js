@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import SweetScroll from 'sweet-scroll';
+import { connect } from 'react-redux';
 import TopMenu from '../components/TopMenu';
 import About from '../components/About';
 import Environment from '../components/Environment';
@@ -11,7 +11,6 @@ import Projects from '../components/Projects';
 import * as actions from '../actions/index';
 
 class Top extends Component {
-
   componentDidMount() {
     this.props.dispatch(actions.fetchActivities());
     this.sweetScroll = new SweetScroll({
@@ -47,11 +46,8 @@ class Top extends Component {
 }
 
 export default connect(
-  state => {
-    console.info(state.activitiyReducer);
-    return {
-      selectedPage: state.indexReducer.selectedPage,
-      activities: state.activitiyReducer.activities,
-    };
-  }
+  state => ({
+    selectedPage: state.indexReducer.selectedPage,
+    activities: state.activitiyReducer.activities,
+  })
 )(Top);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SweetScroll from 'sweet-scroll';
 import autoBind from 'react-autobind';
 import deepCompare from 'react-addons-deep-compare';
 import MenuButton from './helper/MenuButton';

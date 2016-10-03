@@ -25,7 +25,8 @@ export default class MenuButton extends Component {
     return (
       <div
         className="menu-button"
-        onClick={this.onClick}>
+        onClick={this.onClick}
+      >
         <p>
           <i className={icon} aria-hidden="true" />
           {this.props.text}

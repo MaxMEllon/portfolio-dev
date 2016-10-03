@@ -1,9 +1,9 @@
 import 'babel-polyfill';
-import '../assets/style';
 import 'react-fa';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import '../assets/style';
 import Top from './containers/Top';
 import createStore from './stores';
 

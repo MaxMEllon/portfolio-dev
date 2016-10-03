@@ -18,7 +18,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/react-simple-slider" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/react-simple-slider"
+            >
               <i className="fa fa-github" />
             </a>
             react-simple-slider
@@ -36,7 +38,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/babel-plugin-transform-isNil" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/babel-plugin-transform-isNil"
+            >
               <i className="fa fa-github" />
             </a>
             babel-plugin-transform-isNil
@@ -59,7 +63,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/react-addons-deep-compare" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/react-addons-deep-compare"
+            >
               <i className="fa fa-github" />
             </a>
             react-addons-deep-compare
@@ -79,7 +85,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/vim-jsx-pretty" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/vim-jsx-pretty"
+            >
               <i className="fa fa-github" />
             </a>
             vim-jsx-pretty
@@ -99,7 +107,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/poipoi" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/poipoi"
+            >
               <i className="fa fa-github" />
             </a>
             poipoi
@@ -123,7 +133,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/music.nyaovim" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/music.nyaovim"
+            >
               <i className="fa fa-github" />
             </a>
             music.nyaovim
@@ -146,7 +158,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/simplayer" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/simplayer"
+            >
               <i className="fa fa-github" />
             </a>
             simplayer
@@ -170,7 +184,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/nyaovim-nicolive-comment-viewer" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/nyaovim-nicolive-comment-viewer"
+            >
               <i className="fa fa-github" />
             </a>
             nyaovim-nicolive-comment-viewer
@@ -193,7 +209,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/comelon" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/comelon"
+            >
               <i className="fa fa-github" />
             </a>
             comelon
@@ -221,7 +239,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/vim-tmng" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/vim-tmng"
+            >
               <i className="fa fa-github" />
             </a>
             vim-tmng
@@ -241,7 +261,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/AigisCapture" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/AigisCapture"
+            >
               <i className="fa fa-github" />
             </a>
             AigisCapture
@@ -264,7 +286,9 @@ export default class Projects extends Component {
             <a
               className="link"
               target="_blank"
-              href="https://github.com/MaxMEllon/LivenPepper" >
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/LivenPepper"
+            >
               <i className="fa fa-github" />
             </a>
             LivenPepper
@@ -281,8 +305,7 @@ export default class Projects extends Component {
         </div>
         <div className="card">
           <h2>
-            <div className="empty">
-            </div>
+            <div className="empty" />
             顔認証可能，簡易加工可能，汎用画像WebAPI (private)
           </h2>
           <ul className="tag-list">
@@ -295,8 +318,7 @@ export default class Projects extends Component {
         </div>
         <div className="card">
           <h2>
-            <div className="empty">
-            </div>
+            <div className="empty" />
             maxmellon.github.io
           </h2>
           <ul className="tag-list">

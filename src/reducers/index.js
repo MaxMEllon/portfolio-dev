@@ -29,7 +29,6 @@ function scrollReducer(state = initalState.enableScroll, { type, payload }) {
 function activitiyReducer(state = initalState.activities, { type, payload }) {
   switch (type) {
     case actions.FETCH_ACTIVITIES:
-      console.info(payload);
       return { activities: _.get(payload, 'data.activities', null) };
     default:
       return state;
