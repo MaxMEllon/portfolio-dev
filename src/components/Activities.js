@@ -19,8 +19,22 @@ const renderActivity = (activitiesByYears, selectedYear) => (
           );
         })()}
       </td>
-      <td>{activity.title}</td>
-      <td className="detail">{activity.detail}</td>
+      {(() => {
+        const title = activity.title.replace('\r\n', '<br />');
+        return (
+          <td>
+            <div dangerouslySetInnerHTML={{ __html: title }} />
+          </td>
+        );
+      })()}
+      {(() => {
+        const detail = activity.detail.replace('\r\n', '<br />');
+        return (
+          <td className="detail">
+            <div dangerouslySetInnerHTML={{ __html: detail }} />
+          </td>
+        );
+      })()}
     </tr>
   )
 ));
