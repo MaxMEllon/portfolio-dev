@@ -17,7 +17,7 @@ let prevState = false;
 export function scrollChannel() {
   return eventChannel(emit => {
     const change = () => {
-      if (window.scrollY === 0) {
+      if (window.scrollY < 300) {
         if (prevState === true) emit(false);
         prevState = false;
       } else {
@@ -26,9 +26,7 @@ export function scrollChannel() {
       }
     };
     window.addEventListener('scroll', change, false);
-    return () => {
-      window.removeEventListener('scroll', change);
-    };
+    return () => window.removeEventListener('scroll', change);
   });
 }
 
