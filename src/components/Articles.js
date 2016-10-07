@@ -10,7 +10,7 @@ export default class Articles extends Component {
     return (
       <div className="articles">
         <h1 className="title">
-          <i className="fa fa-desktop" /> Articles
+          <i className="fa fa-file-text-o" /> Articles
         </h1>
         <hr className="border-line" />
         <table className="article-list">

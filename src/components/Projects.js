@@ -10,7 +10,7 @@ export default class Projects extends Component {
     return (
       <div className="projects">
         <h1 className="title">
-          <i className="fa fa-desktop" /> Projects
+          <i className="fa fa-code" /> Projects
         </h1>
         <hr className="border-line" />
         <div className="card">
