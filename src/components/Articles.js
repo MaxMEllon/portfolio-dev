@@ -20,10 +20,35 @@ export default class Articles extends Component {
             </tr>
             <tr>
               <td className="content">
-                <a className="link" href="https://www.amazon.co.jp/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3-vol-43-%E7%95%B6%E4%BB%B2%E5%AF%9B%E5%93%B2/dp/4904807405">
+                <a
+                  className="link"
+                  href="https://www.amazon.co.jp/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3-vol-43-%E7%95%B6%E4%BB%B2%E5%AF%9B%E5%93%B2/dp/4904807405"
+                >
                   <i className="fa fa-external-link" />
                 </a>
 シェルスクリプトマガジン vol.43 : 香川大学SLPからお届け
+              </td>
+            </tr>
+            <tr>
+              <td className="content">
+                <a
+                  className="link"
+                  href="https://www.amazon.co.jp/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3-vol-44-%E7%95%B6%E4%BB%B2%E5%AF%9B%E5%93%B2/dp/4904807413/ref=sr_1_3?ie=UTF8&qid=1485102529&sr=8-3&keywords=%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3"
+                >
+                  <i className="fa fa-external-link" />
+                </a>
+シェルスクリプトマガジン vol.44 : 香川大学SLPからお届け
+              </td>
+            </tr>
+            <tr>
+              <td className="content">
+                <a
+                  className="link"
+                  href="https://www.amazon.co.jp/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3-vol-45-%E7%95%B6%E4%BB%B2%E5%AF%9B%E5%93%B2/dp/4904807421/ref=sr_1_2?ie=UTF8&qid=1485102529&sr=8-2&keywords=%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3"
+                >
+                  <i className="fa fa-external-link" />
+                </a>
+シェルスクリプトマガジン vol.45 : 香川大学SLPからお届け
               </td>
             </tr>
             <br />
