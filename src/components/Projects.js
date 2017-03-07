@@ -19,6 +19,44 @@ export default class Projects extends Component {
               className="link"
               target="_blank"
               rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/teratail-cli"
+            >
+              <i className="fa fa-github" />
+            </a>
+            teratail-cli
+          </h2>
+          <ul className="tag-list">
+            <li>bash</li>
+          </ul>
+          <p>
+            <b>bash script</b>shell scriptの練習として作ってみた
+          </p>
+        </div>
+        <div className="card">
+          <h2>
+            <a
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/MaxMEllon/yarn_completion"
+            >
+              <i className="fa fa-github" />
+            </a>
+            yarn_completion
+          </h2>
+          <ul className="tag-list">
+            <li>zsh</li>
+          </ul>
+          <p>
+            <b>zsh用補完 Plugin</b>yarnコマンドを補完したかったので作成．
+          </p>
+        </div>
+        <div className="card">
+          <h2>
+            <a
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://github.com/MaxMEllon/react-simple-slider"
             >
               <i className="fa fa-github" />
@@ -221,115 +259,115 @@ export default class Projects extends Component {
             <li>electron</li>
             <li>React.js</li>
             <li>mocha</li>
-            <li>nightmare(v2)</li>
-            <li>flux</li>
-          </ul>
-          <p>
-            <b>ニコニコ生放送用，コメントビュアー</b>
-            <br />
-            JavaScript, React.js を初めて扱って開発し完成させたもの
-            <br />
-            このアプリケーションを通してJavaScriptの基本的なことを学んだ
-            <br />
-            アーキテクトパターンであるFluxを採用
-          </p>
-        </div>
-        <div className="card">
-          <h2>
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/MaxMEllon/vim-tmng"
-            >
-              <i className="fa fa-github" />
-            </a>
-            vim-tmng
-          </h2>
-          <ul className="tag-list">
-            <li>Vim script</li>
-            <li>Vim plugin</li>
-          </ul>
-          <p>
-            <b>tmng format to highlight for vim</b>
-            <br />
-            研究室の特殊なドキュメント形式をハイライトするためのplugin
-          </p>
-        </div>
-        <div className="card">
-          <h2>
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/MaxMEllon/AigisCapture"
-            >
-              <i className="fa fa-github" />
-            </a>
-            AigisCapture
-          </h2>
-          <ul className="tag-list">
-            <li>.NETFramework 4.5.1</li>
-            <li>WPF</li>
-            <li>C# (6.0)</li>
-            <li>XAML</li>
-            <li>OpenCV</li>
-          </ul>
-          <p>
-            <b>千年戦争アイギスの画面のスクリーンショットを素早く取るためのアプリケーション</b>
-            <br />
-            友人に依頼されて作成
-          </p>
-        </div>
-        <div className="card">
-          <h2>
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/MaxMEllon/LivenPepper"
-            >
-              <i className="fa fa-github" />
-            </a>
-            LivenPepper
-          </h2>
-          <ul className="tag-list">
-            <li>Pepper</li>
-            <li>Python (2.7)</li>
-          </ul>
-          <p>
-            <b>Mushup in Osaka 2015 作品</b>
-            <br />
-            企業賞(DataSpider賞)受賞 本戦:棄権
-          </p>
-        </div>
-        <div className="card">
-          <h2>
-            <div className="empty" />
-            顔認証可能，簡易加工可能，汎用画像WebAPI (private)
-          </h2>
-          <ul className="tag-list">
-            <li>Laravel</li>
-            <li>php</li>
-          </ul>
-          <p>
-            インターンシップで開発
-          </p>
-        </div>
-        <div className="card">
-          <h2>
-            <div className="empty" />
-            maxmellon.github.io
-          </h2>
-          <ul className="tag-list">
-            <li>React.js</li>
-            <li>CSS3</li>
-          </ul>
-          <p>
-            CSSフレームワークを使わずにデザイン
-          </p>
-        </div>
+          <li>nightmare(v2)</li>
+          <li>flux</li>
+        </ul>
+        <p>
+          <b>ニコニコ生放送用，コメントビュアー</b>
+          <br />
+          JavaScript, React.js を初めて扱って開発し完成させたもの
+          <br />
+          このアプリケーションを通してJavaScriptの基本的なことを学んだ
+          <br />
+          アーキテクトパターンであるFluxを採用
+        </p>
       </div>
+      <div className="card">
+        <h2>
+          <a
+            className="link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/MaxMEllon/vim-tmng"
+          >
+            <i className="fa fa-github" />
+          </a>
+          vim-tmng
+        </h2>
+        <ul className="tag-list">
+          <li>Vim script</li>
+          <li>Vim plugin</li>
+        </ul>
+        <p>
+          <b>tmng format to highlight for vim</b>
+          <br />
+          研究室の特殊なドキュメント形式をハイライトするためのplugin
+        </p>
+      </div>
+      <div className="card">
+        <h2>
+          <a
+            className="link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/MaxMEllon/AigisCapture"
+          >
+            <i className="fa fa-github" />
+          </a>
+          AigisCapture
+        </h2>
+        <ul className="tag-list">
+          <li>.NETFramework 4.5.1</li>
+          <li>WPF</li>
+        <li>C# (6.0)</li>
+        <li>XAML</li>
+        <li>OpenCV</li>
+      </ul>
+      <p>
+        <b>千年戦争アイギスの画面のスクリーンショットを素早く取るためのアプリケーション</b>
+        <br />
+        友人に依頼されて作成
+      </p>
+    </div>
+    <div className="card">
+      <h2>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/MaxMEllon/LivenPepper"
+        >
+          <i className="fa fa-github" />
+        </a>
+        LivenPepper
+      </h2>
+      <ul className="tag-list">
+        <li>Pepper</li>
+      <li>Python (2.7)</li>
+    </ul>
+    <p>
+      <b>Mushup in Osaka 2015 作品</b>
+      <br />
+      企業賞(DataSpider賞)受賞 本戦:棄権
+    </p>
+  </div>
+  <div className="card">
+    <h2>
+      <div className="empty" />
+      顔認証可能，簡易加工可能，汎用画像WebAPI (private)
+    </h2>
+    <ul className="tag-list">
+      <li>Laravel</li>
+      <li>php</li>
+    </ul>
+    <p>
+      インターンシップで開発
+    </p>
+  </div>
+  <div className="card">
+    <h2>
+      <div className="empty" />
+      maxmellon.github.io
+    </h2>
+    <ul className="tag-list">
+      <li>React.js</li>
+      <li>CSS3</li>
+    </ul>
+    <p>
+      CSSフレームワークを使わずにデザイン
+    </p>
+  </div>
+</div>
     );
   }
 }
